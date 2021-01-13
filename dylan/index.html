@@ -38,7 +38,7 @@
                   <h5 class="card-title">Dimensions</h5>
 
                   <p class="card-text">Affichez ici la largeur et la hauteur de la fenêtre</p>
-                  <p class="card-text" id="data-size">[data]</p>
+                  <p class="card-text_dimension">[data]</p>
                   
                 </div>
               </div>
@@ -50,7 +50,7 @@
                   <h5 class="card-title">Position de la souris</h5>
 
                   <p class="card-text">Affichez ici la position de la souris en temps réel (dynamique)</p>
-                  <p class="card-text" id="data-mouse">[data]</p>
+                  <p class="card-text_mouse_pos">[data]</p>
                   
                 </div>
               </div>
@@ -63,10 +63,10 @@
 
                   <p class="card-text">Affichez ici les données suivantes:</p>
                   
-                  <ul class="card-test">
-                        <li id="navigator">Navigateur utilisé: [data]</li>
-                        <li id="os">OS utilisé (mac/windows...): [data]</li>
-                        <li id="battery">Niveau de batterie: [data]</li>
+                  <ul class="card-test_specs">
+                        <li>Navigateur utilisé: [data]</li>
+                        <li>OS utilisé (mac/windows...): [data]</li>
+                        <li>Niveau de batterie: [data]</li>
                   </ul>
                   
                 </div>
@@ -80,10 +80,10 @@
 
                   <p class="card-text">Affichez ici les données suivantes:</p>
                   
-                  <ul class="card-test">
-                        <li id="IP">Adresse IP publique: [data]</li>
-                        <li id="previous">La page précédente: [data]</li>
-                        <li id="speedtest">La bande passante de l'utilisateur: [data]</li>
+                  <ul class="card-test_conn">
+                        <li>Adresse IP publique: [data]</li>
+                        <li>La page précédente: [data]</li>
+                        <li>La bande passante de l'utilisateur: [data]</li>
                   </ul>
                   
                 </div>
@@ -97,9 +97,9 @@
 
                   <p class="card-text">Affichez ici les données suivantes:</p>
                   
-                  <ul class="card-test">
-                        <li id="latLng">Position en latitude et longitude: [data]</li>
-                        <li id="countryFromIP">Le pays de l'utilisateur via (https://api.ip2country.info/): [data]</li>
+                  <ul class="card-test_geo">
+                        <li>Position en latitude et longitude: [data]</li>
+                        <li>Le pays de l'utilisateur via (https://api.ip2country.info/): [data]</li>
                   </ul>
                   
                 </div>
@@ -115,7 +115,7 @@
                   
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button id="notification" type="button" class="btn btn-sm btn-outline-secondary">Envoyer !</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary" onclick=notification()>Envoyer !</button>
                     </div>
                   </div>
                 </div>
@@ -129,7 +129,7 @@
 
                   <p class="card-text">Affichez ci-desous une carte (MapBox/ Google Maps / LeafLet), la carte devra contenir un marqueur avec la position de l'utilisateur.</p>
                   
-                  <div id="carte" style="width: 100%; height: 400px; background-color: gray;">
+                  <div id="map" style="width: 100%; height: 400px; background-color: gray;">
                   </div>
                 </div>
               </div>
@@ -143,8 +143,64 @@
   
                     <p class="card-text">En utilisant une API de météo, affichez la température en fonction de la latitude et la longitude de votre utilisateur</p>
                     
-                    <p id="temperature" class="card-text">[data]</p>
+                    <p class="card-text_weather">[data]</p>
                 
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-8">
+                <div class="card mb-4 shadow-sm">
+                  <div class="card-body">
+                    <h5 class="card-title">Progressive Web App</h5>
+  
+                    <p class="card-text">Aidez-vous de la ressource disponible dans le lien ci-dessous pour créer votre progressive web app</p>                    
+                    
+                    <p class="card-text">TODO</p>                    
+                    
+                    <ul>
+                        <li>Service Worker</li>
+                        <li>Web App Manifest</li>
+                        <li>Web App Manifest</li>
+                    </ul>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <a href="https://blog-consulting-and-integration.tessi.eu/posts/introduction-progressive-web-apps-avantages-exemple-tuto" type="button" class="btn btn-sm btn-outline-secondary">PWA</a>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              
+              <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                  <div class="card-body">
+                    <h5 class="card-title">Page offline</h5>
+  
+                    <p class="card-text">Aidez-vous de la ressource disponible pour créer une page offline</p>                    
+                    
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <a href="https://web.dev/offline-fallback-page/" type="button" class="btn btn-sm btn-outline-secondary">PWA OFFLINE</a>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                  <div class="card-body">
+                    <h5 class="card-title">Promouvoir l'installation</h5>
+  
+                    <p class="card-text">Aidez-vous de la ressource disponible pour demander à vos utilisateurs d'installer votre PWA</p>                    
+                    
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <a href="https://web.dev/customize-install/" type="button" class="btn btn-sm btn-outline-secondary">PWA OFFLINE</a>
+                        </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -156,7 +212,7 @@
   
                     <p class="card-text">Enregistrez en LocalStorage le nombre de visites de l'utilisateur</p>                    
                     
-                    <p class="card-text">Vous avez visité le site <span id="visits">[data]</span> fois</p>                    
+                    <p class="card-text">Vous avez visité le site [data] fois</p>                    
                 
                   </div>
                 </div>
@@ -165,18 +221,22 @@
         </div>
     </body>
 
-    <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
     <!-- jQuery and JS bundle w/ Popper.js -->
     <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
+    src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
       crossorigin="anonymous"
     ></script>
-    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+    <script src="main.js"></script>
   </body>
 </html>
